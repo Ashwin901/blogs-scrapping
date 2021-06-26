@@ -1,0 +1,36 @@
+.main-div{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 2rem;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2{
+    margin: 0;
+}
+
+hr{
+    width: 15rem;
+    background-color: black;
+    height: 0.1rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.blog-tile{
+    width: 90vw;
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-weight: bold;
+}

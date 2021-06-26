@@ -1,0 +1,55 @@
+// const getPulseDetails = async () => {
+//     try {
+//         console.log("request");
+//         const response = await axios.get("https://pulsenitk.in/");
+//         const websiteData = response.data;
+//         const $ = cheerio.load(websiteData);
+//         const blogs = [...$(".blog-mini-post-content-container")];
+//         // $(".blog-mini-post-content-container").each((index, el) => {
+//         //     el.childNodes.forEach(child => {
+//         //         console.log(child);
+//         //     })
+//         // })
+//         const blogAItems = [];
+
+//         const blogMetaContent = []
+//         blogs[0].children.forEach(child => {
+//             if (child.attribs && child.attribs.name === "a") {
+//                 blogAItems.push(child);
+//             }
+
+//             if (child.attribs?.class && child.attribs.class === "post-meta") {
+//                 blogMetaContent.push(child);
+//             }
+//         })
+
+//         let content = [];
+//         blogMetaContent[0].children.forEach(child => {
+//             if (child.name && child.name === "div") { // post-meta-content
+//                 child.children.forEach(c => {
+//                     if (c.name && c.name === "span") {
+//                         content.push(c);
+//                     }
+//                 })
+//             }
+//         });
+
+//         content.forEach(c => {
+//             if (c.attribs?.class && c.attribs.class === "post-readtime") {
+//                 c.children.forEach(child => {
+//                     if (child.type === "text") {
+//                         if (child.data.trim().length > 0) {
+//                             console.log(child.data.trim());
+//                         }
+
+//                     }
+//                 })
+//             }
+//         })
+
+//     } catch (e) {
+//         console.log(e);
+//     }
+// }
+
+// getPulseDetails() ;
